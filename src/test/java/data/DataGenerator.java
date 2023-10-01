@@ -1,4 +1,4 @@
-package date;
+package data;
 
 import com.github.javafaker.Faker;
 import io.restassured.builder.RequestSpecBuilder;
@@ -11,7 +11,7 @@ import java.util.Locale;
 
 import static io.restassured.RestAssured.given;
 
-public class DateGenerator {
+public class DataGenerator {
 
     private static final RequestSpecification requestSpec = new RequestSpecBuilder()
             .setBaseUri("http://localhost")
@@ -22,7 +22,7 @@ public class DateGenerator {
             .build();
     private static final Faker faker = new Faker(new Locale("en"));
 
-    private DateGenerator() {
+    private DataGenerator() {
     }
 
     private static void sendRequest(RegistrationDto user) {
